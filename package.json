@@ -26,7 +26,7 @@
   },
   "scripts": {
     "lint": "eslint . --ext .ts",
-    "start": "ts-node --files ./src/index.ts",
-    "commands": "ts-node --files ./src/deploy-commands.ts"
+    "start": "ts-node --files ./index.ts",
+    "commands": "ts-node --files ./deploy-commands.ts"
   }
 }
