@@ -1,11 +1,11 @@
 import fs from 'node:fs';
-import { Client, Collection, Intents } from 'discord.js';
+import * as Discord from 'discord.js';
 import { token } from '../config.json';
 
-const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+const client = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILDS] });
 
-client.commands = new Collection();
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.ts'));
+client.commands = new Discord.Collection();
+const commandFiles = fs.readdirSync('./src/commands').filter(file => file.endsWith('.ts'));
 
 for (const file of commandFiles) {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
