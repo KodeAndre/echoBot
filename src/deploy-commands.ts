@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import { REST } from '@discordjs/rest';
 import { Routes } from 'discord-api-types/v9';
-import { clientId, guildId, token } from '../../config.json';
+import { clientId, guildId, token } from '../config.json';
 
 const commands = [];
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.ts'));
